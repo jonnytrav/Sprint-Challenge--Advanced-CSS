@@ -2,3 +2,29 @@
 .flex {
     display: flex;
 }
+
+.row {
+    flex-flow: row wrap;
+}
+.col {
+    flex-flow: column wrap;
+}
+
+.btn(@wid, @bord) {
+    color: white;
+    background-color: @btn-bg-color;
+    padding-top: 1.2%;
+    padding-bottom: 0.9%;
+    padding-left: 3.5%;
+    width: @wid;
+    border-radius: @bord;
+    border-color: @btn-bg-color;
+
+    @media @mobile {
+        width: @wid;
+        .flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        border-radius: @bord;
+    }
+}
